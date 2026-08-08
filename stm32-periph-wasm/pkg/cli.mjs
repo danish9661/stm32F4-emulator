@@ -126,14 +126,45 @@ async function main() {
     // Also write firmware to the exact vector_table region if different
     if (romStart !== vector_table) uc.mem_write(BigInt(vector_table), firmware);
 
-    // Peripheral ranges
+    // Map full peripheral space (wide ranges for safety, non-hooked regions are pass-through)
+    uc.mem_map(0x40000000, 0x70000000, Module.PROT_READ | Module.PROT_WRITE);
+    uc.mem_map(0xE0000000, 0x1000000, Module.PROT_READ | Module.PROT_WRITE);
+
+    // Narrow mem hook ranges — only the specific peripherals the WASM model handles
     const periphRanges = [
-        [0x40000000, 0xB0000000],
-        [0xE0000000, 0xE1000000],
+        // APB1 (TIMs, RTC, WWDG, IWDG, SPI, USART, I2C, DMA1, PWR, DAC)
+        [0x40000000, 0x40007FFF],
+        // APB2: USART1, USART6
+        [0x40011000, 0x400117FF],
+        // APB2: ADC1-3
+        [0x40012000, 0x400122FF],
+        // APB2: TIM8, SPI1, SPI4, TIM9-11, SPI5, SPI6, SAI1
+        [0x40012C00, 0x40015FFF],
+        // APB2: LTDC
+        [0x40016800, 0x40016FFF],
+        // AHB1: GPIO A-I
+        [0x40020000, 0x400223FF],
+        // AHB1: CRC
+        [0x40023000, 0x40023FFF],
+        // AHB1: RCC
+        [0x40023800, 0x40023BFF],
+        // AHB1: FLASH
+        [0x40023C00, 0x40024FFF],
+        // AHB1: RNG
+        [0x40025800, 0x40025BFF],
+        // AHB1: DMA2
+        [0x40026400, 0x40026FFF],
+        // AHB1: Ethernet MAC/MMC/PTP/DMA
+        [0x40028000, 0x400293FF],
+        // System: SysTick
+        [0xE000E010, 0xE000E020],
+        // System: NVIC
+        [0xE000E100, 0xE000E500],
+        // System: SCB
+        [0xE000ED00, 0xE000EF00],
+        // System: DBGMCU
+        [0xE0042000, 0xE0042100],
     ];
-    for (const [start, end] of periphRanges) {
-        uc.mem_map(start, end - start, Module.PROT_READ | Module.PROT_WRITE);
-    }
 
     // Config devices
     if (config.devices) {
@@ -207,7 +238,7 @@ async function main() {
             }
         }
     };
-    uc.hook_add(Module.HOOK_CODE, codeHook, null);
+    uc.hook_add(Module.HOOK_BLOCK, codeHook, null);
 
     // Gateway networking
     let gwProcess = null;

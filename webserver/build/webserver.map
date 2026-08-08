@@ -1,0 +1,170 @@
+Archive member included to satisfy reference by file (symbol)
+
+C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memset.o)
+                              C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o (memset)
+C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memcpy.o)
+                              C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o (memcpy)
+
+Discarded input sections
+
+ .data          0x00000000        0x0 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\startup.o
+ .bss           0x00000000        0x0 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\startup.o
+ .text          0x00000000        0x0 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .data          0x00000000        0x0 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss           0x00000000        0x0 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.ETH_IRQHandler
+                0x00000000       0x70 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text          0x00000000        0x0 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memset.o)
+ .data          0x00000000        0x0 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memset.o)
+ .bss           0x00000000        0x0 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memset.o)
+ .data          0x00000000        0x0 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memcpy.o)
+ .bss           0x00000000        0x0 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memcpy.o)
+ .ARM.extab     0x00000000        0x0 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memcpy.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x08000000         0x00100000         xr
+RAM              0x20000000         0x00020000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\startup.o
+LOAD C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+START GROUP
+LOAD C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/thumb/v7e-m+fp/hard\libgcc.a
+LOAD C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a
+END GROUP
+
+.text           0x08000000     0x126f
+ *(.vector_table)
+ .vector_table  0x08000000       0x40 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\startup.o
+ *(.text*)
+ .text          0x08000040       0x44 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\startup.o
+                0x08000040                _reset_handler
+                0x08000072                _default_handler
+ .text.uart_putchar
+                0x08000084       0x10 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.uart_puts
+                0x08000094       0x12 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ *fill*         0x080000a6        0x2 
+ .text.uart_hex8
+                0x080000a8       0x20 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.eth_recv_packet
+                0x080000c8       0x84 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.ones_cksum
+                0x0800014c       0x2c C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.build_dhcp.constprop.0
+                0x08000178      0x164 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.eth_send_packet.constprop.0
+                0x080002dc       0x48 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.handle_arp
+                0x08000324       0xf8 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.uart_ip.constprop.0
+                0x0800041c       0xec C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.build_tcp_frame.constprop.0
+                0x08000508      0x148 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.tcp_server_send.isra.0
+                0x08000650       0x44 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .text.setup    0x08000694      0x168 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+                0x08000694                setup
+ .text.loop     0x080007fc      0x588 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+                0x080007fc                loop
+ .text.startup.main
+                0x08000d84        0xc C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+                0x08000d84                main
+ .text.memset   0x08000d90       0x9c C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memset.o)
+                0x08000d90                memset
+ .text          0x08000e2c      0x134 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memcpy.o)
+                0x08000e2c                memcpy
+ *(.rodata*)
+ .rodata.uart_hex8.str1.1
+                0x08000f60      0x2cc C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+                                 0x11 (size before relaxing)
+ .rodata.build_dhcp.constprop.0.str1.1
+                0x0800122c        0x7 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .rodata.setup.str1.1
+                0x0800122c       0x82 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .rodata.loop.str1.1
+                0x0800122c      0x23b C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .rodata        0x0800122c       0x43 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+
+.glue_7         0x08001270        0x0
+ .glue_7        0x08001270        0x0 linker stubs
+
+.glue_7t        0x08001270        0x0
+ .glue_7t       0x08001270        0x0 linker stubs
+
+.vfp11_veneer   0x08001270        0x0
+ .vfp11_veneer  0x08001270        0x0 linker stubs
+
+.v4_bx          0x08001270        0x0
+ .v4_bx         0x08001270        0x0 linker stubs
+
+.iplt           0x08001270        0x0
+ .iplt          0x08001270        0x0 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\startup.o
+
+.rel.dyn        0x08001270        0x0
+ .rel.iplt      0x08001270        0x0 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\startup.o
+
+.ARM.exidx      0x08001270        0x8
+ .ARM.exidx     0x08001270        0x8 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memcpy.o)
+
+.data           0x20000000        0x4 load address 0x08001278
+                0x20000000                        _sdata = .
+ *(.data*)
+ .data.srv_seq  0x20000000        0x4 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+                0x20000004                        _edata = .
+
+.igot.plt       0x20000004        0x0 load address 0x0800127c
+ .igot.plt      0x20000004        0x0 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\startup.o
+
+.bss            0x20000008     0x1e58 load address 0x0800127c
+                0x20000008                        _sbss = .
+ *(.bss*)
+ .bss.client_connected
+                0x20000008        0x4 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.client_port
+                0x2000000c        0x2 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.client_mac
+                0x2000000e        0x6 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.client_ip
+                0x20000014        0x4 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.srv_ack   0x20000018        0x4 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.my_ip     0x2000001c        0x4 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.rx_frame_idx
+                0x20000020        0x4 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.rx_frame_len
+                0x20000024        0x4 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.eth_irq_flag
+                0x20000028        0x4 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ *fill*         0x2000002c        0x4 
+ .bss.tx_desc   0x20000030       0x10 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.rx_desc   0x20000040       0x20 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.tx_pkt    0x20000060      0x600 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .bss.rx_buf    0x20000660     0x1800 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ *(COMMON)
+                0x20001e60                        _ebss = .
+                0x20020000                        _estack = (ORIGIN (RAM) + LENGTH (RAM))
+OUTPUT(C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x00000000       0x30
+ .ARM.attributes
+                0x00000000       0x1c C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\startup.o
+ .ARM.attributes
+                0x0000001c       0x34 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+ .ARM.attributes
+                0x00000050       0x34 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memset.o)
+ .ARM.attributes
+                0x00000084       0x20 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memcpy.o)
+
+.comment        0x00000000       0x39
+ .comment       0x00000000       0x39 C:\Users\Danish\Documents\stm32-emulator-main\webserver\build\webserver.o
+                                 0x3a (size before relaxing)
+ .comment       0x00000039       0x3a C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memset.o)
+
+.debug_frame    0x00000000       0x28
+ .debug_frame   0x00000000       0x28 C:/Users/Danish/AppData/Local/Arduino15/packages/STMicroelectronics/tools/xpack-arm-none-eabi-gcc/14.2.1-1.1/bin/../lib/gcc/arm-none-eabi/14.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libc.a(libc_a-memcpy.o)

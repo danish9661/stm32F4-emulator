@@ -206,7 +206,7 @@ impl Peripheral for EthernetMac {
                             self.macsr |= 1 << 3;
                         }
                     }
-                    self.macmiiar = value & 0xFFFF;
+                    self.macmiiar = (value & 0xFFFF) & !1;
                 }
                 0x14 => self.macmiidr = value & 0xFFFF,
                 0x18 => self.macfcr = value & 0x1FF0F,

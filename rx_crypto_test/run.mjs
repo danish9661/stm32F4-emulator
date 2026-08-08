@@ -44,7 +44,7 @@ for (const [start, end] of periphRanges) {
 }
 
 let instCount = 0n;
-uc.hook_add(Module.HOOK_CODE, (h, addr, size, ud) => {
+uc.hook_add(Module.HOOK_BLOCK, (h, addr, size, ud) => {
     instCount++;
     tick();
 });
