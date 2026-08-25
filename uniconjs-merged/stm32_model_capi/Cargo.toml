@@ -1,0 +1,21 @@
+[package]
+name = "stm32_model_capi"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[dependencies]
+stm32-periph-wasm = { path = "../../stm32-periph-wasm", default-features = false }
+
+[profile.dev]
+opt-level = 0
+panic = "abort"
+
+[profile.release]
+opt-level = "s"
+lto = true
+panic = "abort"
+
+[workspace]
