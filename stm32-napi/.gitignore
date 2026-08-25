@@ -1,0 +1,5 @@
+# Native NAPI addon — build artifacts (DO NOT COMMIT)
+/libstm32_napi.node
+*.node
+*.so
+target/
