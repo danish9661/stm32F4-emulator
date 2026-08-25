@@ -1,7 +1,9 @@
 use crate::system::{System, self};
 use super::Peripheral;
+#[cfg(feature = "wasm-bindgen")]
 use wasm_bindgen::prelude::*;
 
+#[cfg(feature = "wasm-bindgen")]
 #[wasm_bindgen]
 extern "C" {
     #[wasm_bindgen(js_namespace = console)]
